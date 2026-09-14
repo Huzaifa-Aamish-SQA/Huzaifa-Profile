@@ -141,7 +141,10 @@
   h1 .line{display:block;overflow:hidden}
   h1 .line span{display:block}
   h1 .wd{font-style:normal}
-  .lede{margin-top:26px;font-size:clamp(1.02rem,1.4vw,1.22rem);color:var(--muted);max-width:56ch}
+  .lede{margin-top:16px;font-size:clamp(1.02rem,1.4vw,1.22rem);color:var(--muted);max-width:56ch}
+  .ai-note{display:inline-flex;align-items:center;gap:9px;margin-top:24px;padding:8px 16px 8px 14px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent-2) 45%,transparent);background:color-mix(in srgb,var(--accent-2) 12%,transparent);font-size:.85rem;font-weight:700;color:var(--text)}
+  .ai-note i{width:7px;height:7px;border-radius:50%;background:var(--accent-2);flex:0 0 auto}
+  @media (max-width:500px){.ai-note{font-size:.78rem;white-space:normal}}
   .cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
 
   .panel-wrap{position:relative}
@@ -385,6 +388,22 @@
   .proof-card h3{font-size:1.12rem}
   .proof-card p{color:var(--muted);font-size:.92rem}
 
+  /* Evidence gallery: real screenshots, proof not claims */
+  .evid-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+  @media (max-width:900px){.evid-row{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.evid-row{grid-template-columns:1fr}}
+  .evid-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+  .evid-head{display:flex;align-items:center;gap:9px;padding:11px 16px;font-weight:800;font-size:.85rem;color:#fff;letter-spacing:.01em}
+  .evid-head i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.9);flex:0 0 auto}
+  .evid-head.mixpanel{background:linear-gradient(90deg,#6c4bff,#9678ff)}
+  .evid-head.customerio{background:linear-gradient(90deg,#1b2f8f,#3854d6)}
+  .evid-head.firebase{background:linear-gradient(90deg,#f4711f,#ffb32c)}
+  .evid-head.adjust{background:linear-gradient(90deg,#0b6b74,#12a0a8)}
+  .evid-card .imgwrap{overflow:hidden}
+  .evid-card img{display:block;width:100%;height:140px;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);transition:transform .4s}
+  .evid-card:hover img{transform:scale(1.04)}
+  .evid-card figcaption{padding:14px 16px;font-size:.82rem;color:var(--muted);line-height:1.5}
+
   /* Case study modal */
   .helix .mcard{cursor:pointer;padding-bottom:38px}
   .helix .mcard::after{content:"Click for case study \2192";position:absolute;left:20px;bottom:14px;font-size:.68rem;font-weight:800;letter-spacing:.02em;color:var(--accent)}
@@ -394,6 +413,9 @@
   .case-modal.open .case-box{transform:none}
   .case-box .cm-idx{font-weight:800;color:var(--accent);font-size:.82rem;letter-spacing:.08em}
   .case-box h3{font-size:clamp(1.35rem,3vw,1.9rem);margin:10px 0 22px;letter-spacing:-.02em;line-height:1.15}
+  .case-box .cm-img{width:100%;border-radius:14px;border:1px solid var(--line);margin-bottom:22px;display:block}
+  .cm-dl{display:inline-block;margin-top:20px;font-weight:800;font-size:.88rem;color:var(--accent)}
+  .cm-dl:hover{text-decoration:underline}
   .cm-row{margin-bottom:18px}
   .cm-row b{display:block;color:var(--accent-2);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
   .cm-row p{color:var(--muted);line-height:1.65;font-size:.96rem}
@@ -461,10 +483,12 @@
             <span class="line"><span>for products that</span></span>
             <span class="line grad"><span>cannot afford to fail.</span></span>
           </h1>
+          <div class="ai-note reveal"><i></i>QA background, now also building products and websites with AI</div>
           <p class="lede reveal">7+ years of QA across Android, iOS and web, on both client projects and long-running products. Manual, automation and API testing, from HR and e-commerce platforms to live telecom systems. I lead a seven-member QA team and take on freelance QA for teams worldwide.</p>
           <div class="cta reveal">
             <a class="btn btn-primary magnet" href="#contact"><span>Hire me</span></a>
             <a class="btn btn-ghost magnet" href="#work"><span>See my work</span></a>
+            <a class="btn btn-ghost magnet" href="Huzaifa_Aamish_CV.pdf" download><span>Download CV</span></a>
           </div>
           <div class="audience reveal">
             <a href="#contact"><b>Hiring a senior QA?</b><span>Full-time and remote roles, team leadership, release ownership.</span></a>
@@ -501,8 +525,8 @@
       <div class="wrap">
         <div class="fact reveal"><strong data-count="7" data-suffix="+">0</strong><span>Years in software quality assurance</span></div>
         <div class="fact reveal"><strong data-count="7">0</strong><span>QA engineers I lead every day</span></div>
-        <div class="fact reveal"><strong data-count="3">0</strong><span>Platforms covered: Android, iOS, web</span></div>
-        <div class="fact reveal"><strong data-count="120" data-suffix="+">0</strong><span>Release cycles signed off, projects and products</span></div>
+        <div class="fact reveal"><strong data-count="2" data-suffix="M">0</strong><span>Users on the platform I test daily</span></div>
+        <div class="fact reveal"><strong data-count="1000" data-suffix="+">0</strong><span>Bugs raised and tracked in Jira</span></div>
       </div>
     </section>
 
@@ -516,7 +540,7 @@
           <div class="reveal">
             <p>I am a QA lead based in Lahore, working on a VoIP and eSIM platform used by operators and their subscribers. My team owns quality across mobile apps, web portals and the APIs underneath them, from OTP flows and call routing to eSIM provisioning and analytics events.</p>
             <p>Alongside the platform, I take on technical design and QA for national-scale work: a SIM registry for a West African regulator, an A2P SMS honeypot for fraud detection in the Sahel, and voice firewall acceptance for a Southeast Asian operator.</p>
-            <p>AI is a working tool here, not a headline. It drafts test cases from specs, generates edge-case data and triages logs faster than I can read them. The judgement about what matters stays with me.</p>
+            <p>AI is a working tool here, not a headline. It drafts test cases from specs, generates edge-case data and triages logs faster than I can read them, and more recently it is how I build too, from parts of the registry platform's own tooling to this website. The judgement about what matters stays with me.</p>
           </div>
           <ul class="list" id="about-list">
             <li><span class="k">Experience</span><span class="v">7+ years, Android, iOS and web QA</span><i></i></li>
@@ -537,8 +561,8 @@
         </div>
         <div class="tiles">
           <div class="tile big reveal tilt"><span class="tag">Core</span><h3>AI-assisted QA and AI-built products</h3><p>I use AI as a working partner in QA: test cases drafted from specs, synthetic edge-case data, log triage in minutes, and automation scripts generated then reviewed by me. I also build with AI. This website is one example, designed and coded with AI from a blank page, then tested the way I test everything else.</p><ul class="tile-list"><li>Spec-to-test generation</li><li>AI test automation</li><li>Websites and tools built with AI</li><li>Human review on every output</li></ul></div>
-          <div class="tile mid reveal tilt"><h3>Telecom: SMS, OTP, VoIP, eSIM</h3><p>Sender ID behaviour, delivery SLAs, call quality, SM-DP+ profile flows and voice firewall acceptance.</p></div>
-          <div class="tile mid reveal tilt"><h3>Mobile apps</h3><p>Android and iOS on real devices, OTP and payment flows, store readiness.</p></div>
+          <div class="tile mid reveal tilt"><h3>Telecom: SMS, OTP, VoIP, eSIM</h3><p>Sender ID behaviour, delivery SLAs, call quality, SM-DP+ profile flows and voice firewall acceptance.</p><ul class="tile-list"><li>Recharge &amp; top-up</li><li>International calling</li><li>Plans &amp; coupons</li></ul></div>
+          <div class="tile mid reveal tilt"><h3>Mobile apps</h3><p>Android and iOS on real devices, store readiness, and the flows around the core feature.</p><ul class="tile-list"><li>Onboarding</li><li>In-app rating</li><li>Localisation</li><li>Payments: Stripe, wallet, MoneyHash</li></ul></div>
           <div class="tile small reveal tilt"><h3>Web and API</h3><p>End-to-end web QA, REST validation, cross-browser coverage.</p></div>
           <div class="tile small reveal tilt"><h3>Enterprise products</h3><p>HRMS, e-commerce and reporting platforms across long release cycles.</p></div>
           <div class="tile small reveal tilt"><h3>Team and process</h3><p>Leading seven engineers, test strategy, defect workflow, release sign-off.</p></div>
@@ -566,7 +590,7 @@
       <div class="wrap">
         <div class="head">
           <h2 class="reveal">Services</h2>
-          <p class="reveal">For teams hiring a senior QA and for clients who need quality on a project. Press and hold to pause.</p>
+          <p class="reveal">For teams hiring a senior QA and for clients who need quality on a project. Press and hold to pause. <a href="Bug_Report_Sample.pdf" download style="color:var(--accent);font-weight:700">See a sample bug report (PDF) &rarr;</a></p>
         </div>
       </div>
       <div class="svc-orbit" id="orbit"><div class="ring"></div><div class="hub"><div><small>HUZAIFA AAMISH</small><b>QA services</b></div></div><article class="mcard"><span class="idx">01</span><h3>Mobile app testing</h3><p>Android and iOS on real devices. Functional, regression, OTP and payment flows, crash triage, store readiness.</p><ul><li>Device matrix report</li><li>Bug reports</li><li>Release sign-off</li></ul></article><article class="mcard"><span class="idx">02</span><h3>Web and API testing</h3><p>End-to-end web QA plus REST API validation. Schema, auth, edge cases and data integrity.</p><ul><li>Postman collections</li><li>API regression suite</li><li>Cross-browser</li></ul></article><article class="mcard"><span class="idx">03</span><h3>Test automation</h3><p>Smoke and regression suites for mobile and web, wired into your CI.</p><ul><li>Appium, Selenium, Playwright</li><li>CI integration</li><li>Flaky-test cleanup</li></ul></article><article class="mcard"><span class="idx">04</span><h3>Telecom QA</h3><p>A2P SMS, OTP delivery, VoIP call quality, eSIM provisioning and voice firewall acceptance.</p><ul><li>ATP documents</li><li>SLA verification</li><li>Sender ID checks</li></ul></article><article class="mcard"><span class="idx">05</span><h3>QA process and team setup</h3><p>Test strategy, tooling, defect workflow and reporting for teams scaling or starting from zero.</p><ul><li>Test plan</li><li>Jira workflow</li><li>Team mentoring</li></ul></article><article class="mcard"><span class="idx">06</span><h3>AI-assisted QA</h3><p>Spec-to-test generation, synthetic data and log triage using AI, reviewed by a human.</p><ul><li>Faster test design</li><li>Edge-case coverage</li><li>Log analysis</li></ul></article></div>
@@ -592,22 +616,44 @@
       <div class="wrap">
         <div class="head">
           <h2 class="reveal">Selected work</h2>
-          <p class="reveal">Projects and products, seven years across telecom, enterprise HR, construction tech and e-commerce. Click a card for the full case study, click empty space to pause.</p>
+          <p class="reveal">Projects and products, seven years across telecom, enterprise HR, construction tech, e-commerce and design QA. Click a card for the full case study, click empty space to pause.</p>
         </div>
       </div>
-      <div class="helix" id="workHelix"><div class="axis"></div><article class="mcard" data-case="0"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard" data-case="1"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard" data-case="2"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard" data-case="3"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard" data-case="4"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard" data-case="5"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard" data-case="6"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article><article class="mcard b" data-case="0"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard b" data-case="1"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard b" data-case="2"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard b" data-case="3"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard b" data-case="4"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard b" data-case="5"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard b" data-case="6"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article></div>
+      <div class="helix" id="workHelix"><div class="axis"></div><article class="mcard" data-case="0"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard" data-case="1"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard" data-case="2"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard" data-case="3"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard" data-case="4"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard" data-case="5"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard" data-case="6"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article><article class="mcard" data-case="7"><span class="idx">08</span><h3>Figma vs Build, visual QA</h3><p>Design-comparison QA on a 2M-user product: screens checked against Figma module by module, discrepancies raised with annotated side-by-side evidence.</p><ul><li>Visual QA</li><li>Figma</li><li>Freelance</li></ul></article><article class="mcard b" data-case="0"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard b" data-case="1"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard b" data-case="2"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard b" data-case="3"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard b" data-case="4"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard b" data-case="5"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard b" data-case="6"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article><article class="mcard b" data-case="7"><span class="idx">08</span><h3>Figma vs Build, visual QA</h3><p>Design-comparison QA on a 2M-user product: screens checked against Figma module by module, discrepancies raised with annotated side-by-side evidence.</p><ul><li>Visual QA</li><li>Figma</li><li>Freelance</li></ul></article></div>
     </section>
 
     <section class="block" id="proof">
       <div class="wrap">
         <div class="head">
           <h2 class="reveal">Track record</h2>
-          <p class="reveal">Early days on freelance platforms. Verified outcomes only, no invented quotes.</p>
+          <p class="reveal">Verified numbers from real work, not invented for a landing page.</p>
         </div>
         <div class="proof-row">
-          <article class="proof-card reveal"><span class="proof-tag">Verified Upwork contract</span><h3>Android beta testing engagement</h3><p>26 bugs found in a single cycle, including 1 critical and 8 high severity. Full report delivered and payment released the same day.</p></article>
-          <article class="proof-card reveal"><span class="proof-tag">Ongoing</span><h3>Active across three platforms</h3><p>Delivering freelance QA work alongside a full-time lead role, across Upwork, Fiverr and uTest.</p></article>
-          <article class="proof-card reveal"><span class="proof-tag">In progress</span><h3>Reviews landing soon</h3><p>This section grows as each engagement closes. Real client feedback appears here first, nothing fabricated in the meantime.</p></article>
+          <article class="proof-card reveal"><span class="proof-tag">Verified</span><h3>75% cut in production defect leakage</h3><p>Fewer defects reaching production after test process and coverage improvements on owned modules.</p></article>
+          <article class="proof-card reveal"><span class="proof-tag">Verified</span><h3>Under 2% defect escape rate</h3><p>On modules owned end to end, measured release over release, not a one-off result.</p></article>
+          <article class="proof-card reveal"><span class="proof-tag">Verified</span><h3>67 analytics events verified end to end</h3><p>Checked against the dashboard, not just the spec: Mixpanel, Firebase, Adjust and Customer.io.</p></article>
+        </div>
+        <div class="evid-row">
+          <figure class="evid-card reveal">
+            <div class="evid-head mixpanel"><i></i>Mixpanel</div>
+            <img src="evidence-mixpanel.jpg" alt="Mixpanel activity feed showing an in-app rating event" onerror="this.remove()">
+            <figcaption>In-app rating logged "skip" status alongside a real 3-star value, flagged for the dev team.</figcaption>
+          </figure>
+          <figure class="evid-card reveal">
+            <div class="evid-head firebase"><i></i>Firebase</div>
+            <img src="evidence-firebase.jpg" alt="Firebase DebugView showing an analytics event" onerror="this.remove()">
+            <figcaption>An email address surfacing inside an analytics event parameter, caught before it shipped.</figcaption>
+          </figure>
+          <figure class="evid-card reveal">
+            <div class="evid-head adjust"><i></i>Adjust</div>
+            <img src="evidence-adjust.jpg" alt="Adjust dashboard showing attribution events" onerror="this.remove()">
+            <figcaption>eSIM purchase and top-up events verified against attribution, install to conversion.</figcaption>
+          </figure>
+          <figure class="evid-card reveal">
+            <div class="evid-head customerio"><i></i>Customer.io</div>
+            <img src="evidence-customerio.jpg" alt="Customer.io activity feed" onerror="this.remove()">
+            <figcaption>Activity feed cross-checked against the triggers the campaign was supposed to fire.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -771,7 +817,7 @@
     addEventListener('resize',layout);
   })();
   (function(){
-    const st=document.getElementById('workHelix'), cards=[...st.querySelectorAll('.mcard')], N=7, SPEED=68; let off=0, paused=false, last=performance.now();
+    const st=document.getElementById('workHelix'), cards=[...st.querySelectorAll('.mcard')], N=8, SPEED=68; let off=0, paused=false, last=performance.now();
     function layout(){ const W=st.clientWidth,H=st.clientHeight,cw=270,span=W+cw*1.6,gap=span/N;
       cards.forEach((c,i)=>{ const strand=i<N?0:1, k=i%N; let x=((k*gap+off)%span+span)%span-cw*.8; const ph=(x/W)*Math.PI*2+(strand?Math.PI:0);
         const z=Math.sin(ph), y=H/2-120+Math.cos(ph)*H*.26, depth=(z+1)/2, s=.7+depth*.34;
@@ -786,9 +832,9 @@
   const CASES = [
     { title:"National SIM registry, West Africa",
       problem:"A regulator needed a national SIM registry reliable enough to link operator submissions to verified records, with no room for silent data drift.",
-      approach:"Authored the low-level design end to end (schema, status lifecycle, REST contracts) and built a test suite generated directly from the status-transition matrix, with negative tests down to database constraints.",
+      approach:"Authored the low-level design end to end (schema, status lifecycle, REST contracts) and built a test suite generated directly from the status-transition matrix, with negative tests down to database constraints. More recently, extended beyond QA into using AI-assisted development to help build parts of the platform's own tooling and interfaces.",
       outcome:"Design taken through architect review and approved; the automated suite catches transition and integrity violations before they reach production.",
-      tools:["System design","API contract testing","Data integrity checks","Documentation"] },
+      tools:["System design","API contract testing","Data integrity checks","AI-assisted development"] },
     { title:"A2P SMS honeypot, Sahel",
       problem:"Sender ID abuse in A2P SMS traffic needed to be captured and proven, across residential networks that drop out constantly.",
       approach:"Built device-level automation to capture OTP and SMS traffic, with an async pipeline designed to keep working through flaky connections and offline devices.",
@@ -798,7 +844,8 @@
       problem:"An operator needed proof that a new voice firewall blocked fraudulent call patterns without over-blocking real traffic.",
       approach:"Wrote and executed a full acceptance test procedure covering call scenarios, blocking rules and reporting accuracy end to end.",
       outcome:"A signed-off ATP the operator could rely on for go-live, with reporting accuracy verified against real call data.",
-      tools:["ATP documentation","VoIP testing","Defect tracking"] },
+      tools:["ATP documentation","VoIP testing","Defect tracking"],
+      sample:"QA_Sample_Silent_Failures_Report.pdf" },
     { title:"VoIP and eSIM platform QA",
       problem:"A live VoIP and eSIM platform needed consistent quality across mobile, web and API as the team and release cadence both grew.",
       approach:"Leading a seven-member QA team: test planning, defect triage and release sign-off every cycle across all three surfaces.",
@@ -818,16 +865,25 @@
       problem:"A high-traffic auto parts marketplace needed regression coverage that would not slow down shipping.",
       approach:"E-commerce QA across vehicle fitment search, catalogue, cart and checkout, with regression cycles built for speed.",
       outcome:"The store kept shipping reliably through frequent regression cycles without becoming a bottleneck.",
-      tools:["Regression testing","E-commerce QA","Checkout testing"] }
+      tools:["Regression testing","E-commerce QA","Checkout testing"] },
+    { title:"Figma vs Build, visual QA",
+      image:"figma-visual-qa.jpg",
+      problem:"A 2M-user product needed proof that what shipped actually matched what was designed, module by module, not just spot-checked.",
+      approach:"Systematic design-comparison QA: every screen checked against its Figma spec, 50+ screens per module, discrepancies logged as tickets with annotated side-by-side evidence.",
+      outcome:"A repeatable visual QA process the client could run every release, not a one-time audit.",
+      tools:["Figma","Visual QA","Annotated reporting"] }
   ];
   const caseModal=document.getElementById('caseModal'), caseBody=document.getElementById('caseBody');
   function openCase(card){
     const idx=+card.dataset.case, c=CASES[idx]; if(!c) return;
-    caseBody.innerHTML=`<span class="cm-idx">${String(idx+1).padStart(2,'0')} / 07</span><h3>${c.title}</h3>
+    const total=String(CASES.length).padStart(2,'0');
+    caseBody.innerHTML=`<span class="cm-idx">${String(idx+1).padStart(2,'0')} / ${total}</span><h3>${c.title}</h3>
+      ${c.image?'<img class="cm-img" src="'+c.image+'" alt="" onerror="this.remove()">':''}
       <div class="cm-row"><b>Problem</b><p>${c.problem}</p></div>
       <div class="cm-row"><b>Approach</b><p>${c.approach}</p></div>
       <div class="cm-row"><b>Outcome</b><p>${c.outcome}</p></div>
-      <ul class="cm-tools">${c.tools.map(t=>'<li>'+t+'</li>').join('')}</ul>`;
+      <ul class="cm-tools">${c.tools.map(t=>'<li>'+t+'</li>').join('')}</ul>
+      ${c.sample?'<a class="cm-dl" href="'+c.sample+'" download>Download sanitised sample report (PDF) &rarr;</a>':''}`;
     caseModal.classList.add('open'); document.body.style.overflow='hidden';
   }
   function closeCase(){ caseModal.classList.remove('open'); document.body.style.overflow=''; }
