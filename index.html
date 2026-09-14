@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Huzaifa Aamish | Senior SQA Engineer, AI QA and AI builder</title>
 <meta name="description" content="Senior SQA Engineer specialising in telecom quality: A2P SMS, VoIP, eSIM and OTP flows. AI-assisted quality engineering.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#141f4d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Huzaifa Aamish | Senior SQA Engineer, AI QA and AI builder">
+<meta property="og:description" content="Senior SQA Engineer specialising in telecom quality: A2P SMS, VoIP, eSIM and OTP flows. AI-assisted quality engineering.">
+<meta property="og:image" content="https://huzaifa-aamish-sqa.github.io/Huzaifa-Profile/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://huzaifa-aamish-sqa.github.io/Huzaifa-Profile/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Huzaifa Aamish | Senior SQA Engineer, AI QA and AI builder">
+<meta name="twitter:description" content="Senior SQA Engineer specialising in telecom quality: A2P SMS, VoIP, eSIM and OTP flows. AI-assisted quality engineering.">
+<meta name="twitter:image" content="https://huzaifa-aamish-sqa.github.io/Huzaifa-Profile/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -55,7 +71,7 @@
   .avatar.lg::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(from 0deg,var(--accent),#7c5cff,var(--accent-2),var(--accent));animation:spin 4s linear infinite;z-index:0}
   .avatar.lg::after{content:"";position:absolute;inset:-3px;border-radius:50%;background:var(--bg);z-index:0}
   .avatar.lg b{position:relative;z-index:1}
-  .avatar.lg img,.avatar.lg b{z-index:1}
+  .avatar.lg img{z-index:2}
   .avatar.lg{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
   .intro:hover .avatar.lg{transform:scale(1.08) rotate(-6deg)}
   .intro strong .ch{display:inline-block;will-change:transform}
@@ -338,6 +354,54 @@
   .cb-in input:focus{border-color:var(--accent)}
   .cb-in button{font:inherit;font-weight:700;padding:0 16px;border-radius:999px;border:0;background:var(--accent);color:#1a0f05;cursor:pointer}
   @media (max-width:760px){.cb{right:16px;bottom:78px}.cb-fab{right:16px;bottom:16px}}
+  /* Tools & stack strip */
+  .stack-strip{padding:46px 0 10px;position:relative;z-index:1}
+  .stack-label{text-align:center;color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+  .stack-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .stack-pill{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.85rem;font-weight:700;color:var(--text);transition:transform .3s,border-color .3s}
+  .stack-pill:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .stack-pill i{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:0 0 auto}
+  .stack-pill:nth-child(3n+2) i{background:var(--accent-2)}
+  .stack-pill:nth-child(3n+3) i{background:#7c5cff}
+
+  /* Process: how we work together */
+  .proc{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:12px}
+  @media (max-width:900px){.proc{grid-template-columns:1fr;gap:34px}}
+  .proc-line{position:absolute;top:22px;left:6%;right:6%;height:2px;background:var(--line);overflow:hidden;z-index:0}
+  @media (max-width:900px){.proc-line{display:none}}
+  .proc-line i{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:block}
+  .proc-step{position:relative;z-index:1}
+  .proc-num{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--card);border:1px solid var(--line);font-weight:800;color:var(--accent);margin-bottom:16px;font-size:.95rem}
+  .proc-step h3{font-size:1.15rem;margin-bottom:8px}
+  .proc-step p{color:var(--muted);font-size:.92rem}
+
+  /* Track record (honest proof, no invented quotes) */
+  .proof-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:900px){.proof-row{grid-template-columns:1fr}}
+  .proof-card{border:1px solid var(--line);border-radius:22px;padding:26px;background:var(--card);display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+  .proof-card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width 1s ease}
+  .proof-card.in::before{width:100%}
+  .proof-tag{align-self:flex-start;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 50%,transparent);border-radius:999px;padding:4px 10px}
+  .proof-card h3{font-size:1.12rem}
+  .proof-card p{color:var(--muted);font-size:.92rem}
+
+  /* Case study modal */
+  .helix .mcard{cursor:pointer;padding-bottom:38px}
+  .helix .mcard::after{content:"Click for case study \2192";position:absolute;left:20px;bottom:14px;font-size:.68rem;font-weight:800;letter-spacing:.02em;color:var(--accent)}
+  .case-modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:24px;background:rgba(6,10,30,.6);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .3s}
+  .case-modal.open{opacity:1;pointer-events:auto}
+  .case-box{width:min(640px,100%);max-height:85vh;overflow:auto;border-radius:26px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,var(--card));backdrop-filter:blur(18px);padding:34px;transform:scale(.92) translateY(16px);transition:transform .35s cubic-bezier(.2,.8,.2,1);position:relative}
+  .case-modal.open .case-box{transform:none}
+  .case-box .cm-idx{font-weight:800;color:var(--accent);font-size:.82rem;letter-spacing:.08em}
+  .case-box h3{font-size:clamp(1.35rem,3vw,1.9rem);margin:10px 0 22px;letter-spacing:-.02em;line-height:1.15}
+  .cm-row{margin-bottom:18px}
+  .cm-row b{display:block;color:var(--accent-2);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .cm-row p{color:var(--muted);line-height:1.65;font-size:.96rem}
+  .cm-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+  .cm-tools li{list-style:none;font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--text)}
+  .case-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;font-size:1rem;line-height:1}
+  .case-close:hover{border-color:var(--accent)}
+
   .reveal{opacity:0;transform:translateY(34px)}
   @media (prefers-reduced-motion:reduce){
     .orbit i,.blob{animation:none}
@@ -482,6 +546,22 @@
       </div>
     </section>
 
+    <div class="stack-strip">
+      <div class="wrap">
+        <p class="stack-label reveal">Tools and stack, used daily</p>
+        <div class="stack-row reveal">
+          <span class="stack-pill"><i></i>Postman</span>
+          <span class="stack-pill"><i></i>Jira</span>
+          <span class="stack-pill"><i></i>Appium</span>
+          <span class="stack-pill"><i></i>Selenium</span>
+          <span class="stack-pill"><i></i>Charles Proxy</span>
+          <span class="stack-pill"><i></i>Figma</span>
+          <span class="stack-pill"><i></i>Confluence</span>
+          <span class="stack-pill"><i></i>JMeter</span>
+        </div>
+      </div>
+    </div>
+
     <section class="block" id="services">
       <div class="wrap">
         <div class="head">
@@ -492,14 +572,44 @@
       <div class="svc-orbit" id="orbit"><div class="ring"></div><div class="hub"><div><small>HUZAIFA AAMISH</small><b>QA services</b></div></div><article class="mcard"><span class="idx">01</span><h3>Mobile app testing</h3><p>Android and iOS on real devices. Functional, regression, OTP and payment flows, crash triage, store readiness.</p><ul><li>Device matrix report</li><li>Bug reports</li><li>Release sign-off</li></ul></article><article class="mcard"><span class="idx">02</span><h3>Web and API testing</h3><p>End-to-end web QA plus REST API validation. Schema, auth, edge cases and data integrity.</p><ul><li>Postman collections</li><li>API regression suite</li><li>Cross-browser</li></ul></article><article class="mcard"><span class="idx">03</span><h3>Test automation</h3><p>Smoke and regression suites for mobile and web, wired into your CI.</p><ul><li>Appium, Selenium, Playwright</li><li>CI integration</li><li>Flaky-test cleanup</li></ul></article><article class="mcard"><span class="idx">04</span><h3>Telecom QA</h3><p>A2P SMS, OTP delivery, VoIP call quality, eSIM provisioning and voice firewall acceptance.</p><ul><li>ATP documents</li><li>SLA verification</li><li>Sender ID checks</li></ul></article><article class="mcard"><span class="idx">05</span><h3>QA process and team setup</h3><p>Test strategy, tooling, defect workflow and reporting for teams scaling or starting from zero.</p><ul><li>Test plan</li><li>Jira workflow</li><li>Team mentoring</li></ul></article><article class="mcard"><span class="idx">06</span><h3>AI-assisted QA</h3><p>Spec-to-test generation, synthetic data and log triage using AI, reviewed by a human.</p><ul><li>Faster test design</li><li>Edge-case coverage</li><li>Log analysis</li></ul></article></div>
     </section>
 
+    <section class="block" id="process">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="reveal">How we work together</h2>
+          <p class="reveal">A simple process for freelance engagements, from first message to sign-off.</p>
+        </div>
+        <div class="proc">
+          <div class="proc-line"><i id="procFill"></i></div>
+          <div class="proc-step reveal"><span class="proc-num">01</span><h3>Discovery call</h3><p>Understand the product, the platforms, and what quality means for this release.</p></div>
+          <div class="proc-step reveal"><span class="proc-num">02</span><h3>Scope and plan</h3><p>Test strategy, timeline and deliverables agreed before any testing starts.</p></div>
+          <div class="proc-step reveal"><span class="proc-num">03</span><h3>Test cycle</h3><p>Manual, automation and API testing executed against the plan, bugs reported as they are found.</p></div>
+          <div class="proc-step reveal"><span class="proc-num">04</span><h3>Report and sign-off</h3><p>Summary report, coverage and open risks, sign-off before release.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section class="block" id="work">
       <div class="wrap">
         <div class="head">
           <h2 class="reveal">Selected work</h2>
-          <p class="reveal">Projects and products, seven years across telecom, enterprise HR, construction tech and e-commerce. The cards keep turning, click to pause, click again to resume.</p>
+          <p class="reveal">Projects and products, seven years across telecom, enterprise HR, construction tech and e-commerce. Click a card for the full case study, click empty space to pause.</p>
         </div>
       </div>
-      <div class="helix" id="workHelix"><div class="axis"></div><article class="mcard"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article><article class="mcard b"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard b"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard b"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard b"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard b"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard b"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard b"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article></div>
+      <div class="helix" id="workHelix"><div class="axis"></div><article class="mcard" data-case="0"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard" data-case="1"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard" data-case="2"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard" data-case="3"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard" data-case="4"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard" data-case="5"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard" data-case="6"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article><article class="mcard b" data-case="0"><span class="idx">01</span><h3>National SIM registry, West Africa</h3><p>Low-level design and QA strategy for a regulator-grade registry handling operator submissions, identity validation and audit trails.</p><ul><li>System design</li><li>Data integrity</li><li>Regulatory</li></ul></article><article class="mcard b" data-case="1"><span class="idx">02</span><h3>A2P SMS honeypot, Sahel</h3><p>Device automation that captures OTP traffic to identify Sender ID abuse, with an async pipeline built to survive flaky residential networks.</p><ul><li>Automation</li><li>Fraud detection</li><li>Android</li></ul></article><article class="mcard b" data-case="2"><span class="idx">03</span><h3>Voice firewall acceptance, Southeast Asia</h3><p>Acceptance test procedure for an operator voice firewall, covering call scenarios, blocking rules and reporting accuracy.</p><ul><li>ATP</li><li>VoIP</li><li>Operator</li></ul></article><article class="mcard b" data-case="3"><span class="idx">04</span><h3>VoIP and eSIM platform QA</h3><p>Leading a seven-member team across mobile, web and API testing for a live platform, with release sign-off every cycle.</p><ul><li>Team lead</li><li>Release QA</li><li>eSIM</li></ul></article><article class="mcard b" data-case="4"><span class="idx">05</span><h3>HRMS, recruitment to retirement</h3><p>Product QA for an enterprise HR suite by Aramis Enterprise Solutions: attendance, roster, payroll, web check-in and onboarding flows, tested across releases as the product grew.</p><ul><li>Product</li><li>Enterprise</li><li>Web</li></ul></article><article class="mcard b" data-case="5"><span class="idx">06</span><h3>RoofScope</h3><p>Project QA for Wadic on a roofing measurement and reporting platform: order flows, report accuracy, and the web and mobile experience behind them.</p><ul><li>Project</li><li>Web, mobile</li><li>Reports</li></ul></article><article class="mcard b" data-case="6"><span class="idx">07</span><h3>PartsGeek</h3><p>E-commerce QA for an auto parts marketplace: vehicle fitment search, catalogue, cart and checkout, and the regression cycles that keep a high-traffic store shipping.</p><ul><li>E-commerce</li><li>Regression</li><li>Web</li></ul></article></div>
+    </section>
+
+    <section class="block" id="proof">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="reveal">Track record</h2>
+          <p class="reveal">Early days on freelance platforms. Verified outcomes only, no invented quotes.</p>
+        </div>
+        <div class="proof-row">
+          <article class="proof-card reveal"><span class="proof-tag">Verified Upwork contract</span><h3>Android beta testing engagement</h3><p>26 bugs found in a single cycle, including 1 critical and 8 high severity. Full report delivered and payment released the same day.</p></article>
+          <article class="proof-card reveal"><span class="proof-tag">Ongoing</span><h3>Active across three platforms</h3><p>Delivering freelance QA work alongside a full-time lead role, across Upwork, Fiverr and uTest.</p></article>
+          <article class="proof-card reveal"><span class="proof-tag">In progress</span><h3>Reviews landing soon</h3><p>This section grows as each engagement closes. Real client feedback appears here first, nothing fabricated in the meantime.</p></article>
+        </div>
+      </div>
     </section>
 
     <section class="contact" id="contact">
@@ -523,6 +633,12 @@
 </div>
 
 
+<div class="case-modal" id="caseModal">
+  <div class="case-box">
+    <button class="case-close" id="caseClose" type="button" aria-label="Close">x</button>
+    <div id="caseBody"></div>
+  </div>
+</div>
 <div class="gate" id="gate" aria-hidden="true">
   <div class="gate-box" id="gateBox">
     <svg viewBox="0 0 200 200" fill="none" stroke-linejoin="round"><path d="M100 12l76 44v88l-76 44-76-44V56z" stroke="rgba(90,209,255,.35)" stroke-width="1.5" stroke-dasharray="6 10"/><path d="M100 34l57 33v66l-57 33-57-33V67z" stroke="rgba(255,138,61,.45)" stroke-width="1.5"/><path d="M100 58l36 21v42l-36 21-36-21V79z" stroke="rgba(244,246,255,.15)" stroke-width="1"/></svg>
@@ -661,10 +777,73 @@
         const z=Math.sin(ph), y=H/2-120+Math.cos(ph)*H*.26, depth=(z+1)/2, s=.7+depth*.34;
         c.style.transform=`translate3d(${x}px,${y}px,${z*220}px) rotateX(${-Math.cos(ph)*10}deg) scale(${s})`; c.style.zIndex=Math.round(depth*100); c.style.opacity=.35+depth*.65; c.style.filter=`blur(${(1-depth)*1.8}px)`; c.classList.toggle('front',depth>.92); }); }
     /* click toggles pause, does not respond to hover, and is never affected by page scroll */
-    st.addEventListener('click',()=>{ paused=!paused; });
+    st.addEventListener('click',(e)=>{ const card=e.target.closest('.mcard'); if(card){ openCase(card); return; } paused=!paused; });
     function tick(now){ const dt=Math.min(.05,(now-last)/1000); last=now; if(!paused&&!reduce) off-=dt*SPEED; layout(); requestAnimationFrame(tick); } requestAnimationFrame(tick);
     addEventListener('resize',layout);
   })();
+
+  /* Case study modal: full detail behind each Selected work card */
+  const CASES = [
+    { title:"National SIM registry, West Africa",
+      problem:"A regulator needed a national SIM registry reliable enough to link operator submissions to verified records, with no room for silent data drift.",
+      approach:"Authored the low-level design end to end (schema, status lifecycle, REST contracts) and built a test suite generated directly from the status-transition matrix, with negative tests down to database constraints.",
+      outcome:"Design taken through architect review and approved; the automated suite catches transition and integrity violations before they reach production.",
+      tools:["System design","API contract testing","Data integrity checks","Documentation"] },
+    { title:"A2P SMS honeypot, Sahel",
+      problem:"Sender ID abuse in A2P SMS traffic needed to be captured and proven, across residential networks that drop out constantly.",
+      approach:"Built device-level automation to capture OTP and SMS traffic, with an async pipeline designed to keep working through flaky connections and offline devices.",
+      outcome:"A capture pipeline that survives real-world network conditions instead of silently losing data when a device or connection drops.",
+      tools:["Android automation","Async architecture","Server-side capture","Fraud detection"] },
+    { title:"Voice firewall acceptance, Southeast Asia",
+      problem:"An operator needed proof that a new voice firewall blocked fraudulent call patterns without over-blocking real traffic.",
+      approach:"Wrote and executed a full acceptance test procedure covering call scenarios, blocking rules and reporting accuracy end to end.",
+      outcome:"A signed-off ATP the operator could rely on for go-live, with reporting accuracy verified against real call data.",
+      tools:["ATP documentation","VoIP testing","Defect tracking"] },
+    { title:"VoIP and eSIM platform QA",
+      problem:"A live VoIP and eSIM platform needed consistent quality across mobile, web and API as the team and release cadence both grew.",
+      approach:"Leading a seven-member QA team: test planning, defect triage and release sign-off every cycle across all three surfaces.",
+      outcome:"A steady release sign-off cadence maintained while the team and platform scaled.",
+      tools:["Team leadership","Mobile QA","API testing","Release sign-off"] },
+    { title:"HRMS, recruitment to retirement",
+      problem:"An enterprise HR product spanning the full employee lifecycle needed QA that kept pace with continuous feature growth.",
+      approach:"Product QA across attendance, roster, payroll, web check-in and onboarding flows, tested release over release for Aramis Enterprise Solutions.",
+      outcome:"Stable product quality maintained as scope expanded from a single module into a full HR suite.",
+      tools:["Functional testing","Regression testing","Web QA"] },
+    { title:"RoofScope",
+      problem:"A roofing measurement and reporting platform needed accurate order flows and dependable reports across web and mobile, for Wadic.",
+      approach:"Project QA covering order flows, report accuracy, and the web and mobile experience behind them.",
+      outcome:"Reliable order and reporting flows the client could put in front of its own customers.",
+      tools:["Functional testing","Cross-platform QA","Report verification"] },
+    { title:"PartsGeek",
+      problem:"A high-traffic auto parts marketplace needed regression coverage that would not slow down shipping.",
+      approach:"E-commerce QA across vehicle fitment search, catalogue, cart and checkout, with regression cycles built for speed.",
+      outcome:"The store kept shipping reliably through frequent regression cycles without becoming a bottleneck.",
+      tools:["Regression testing","E-commerce QA","Checkout testing"] }
+  ];
+  const caseModal=document.getElementById('caseModal'), caseBody=document.getElementById('caseBody');
+  function openCase(card){
+    const idx=+card.dataset.case, c=CASES[idx]; if(!c) return;
+    caseBody.innerHTML=`<span class="cm-idx">${String(idx+1).padStart(2,'0')} / 07</span><h3>${c.title}</h3>
+      <div class="cm-row"><b>Problem</b><p>${c.problem}</p></div>
+      <div class="cm-row"><b>Approach</b><p>${c.approach}</p></div>
+      <div class="cm-row"><b>Outcome</b><p>${c.outcome}</p></div>
+      <ul class="cm-tools">${c.tools.map(t=>'<li>'+t+'</li>').join('')}</ul>`;
+    caseModal.classList.add('open'); document.body.style.overflow='hidden';
+  }
+  function closeCase(){ caseModal.classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('caseClose').addEventListener('click', closeCase);
+  caseModal.addEventListener('click', e=>{ if(e.target===caseModal) closeCase(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeCase(); });
+
+  /* Process line fill on scroll */
+  ScrollTrigger.create({trigger:'.proc',start:'top 75%',once:true,onEnter:()=>{
+    gsap.to('#procFill',{width:'100%',duration:1.4,ease:'power2.out'});
+  }});
+
+  /* Track record cards: top bar sweep on scroll */
+  ScrollTrigger.create({trigger:'.proof-row',start:'top 82%',once:true,onEnter:()=>{
+    document.querySelectorAll('.proof-card').forEach((c,i)=>setTimeout(()=>c.classList.add('in'), i*150+200));
+  }});
 
   /* Tilt cards */
   if(fine && !reduce){
