@@ -142,7 +142,22 @@
   h1 .line span{display:block}
   h1 .wd{font-style:normal}
   .lede{margin-top:16px;font-size:clamp(1.02rem,1.4vw,1.22rem);color:var(--muted);max-width:56ch}
-  .ai-note{display:flex;align-items:flex-start;gap:10px;max-width:58ch;margin-top:24px;padding:12px 18px 12px 16px;border-radius:20px;border:1px solid color-mix(in srgb,var(--accent-2) 45%,transparent);background:color-mix(in srgb,var(--accent-2) 12%,transparent);font-size:.92rem;line-height:1.5;font-weight:600;color:var(--text)}
+  .ai-note{display:flex;align-items:flex-start;gap:10px;width:fit-content;max-width:min(58ch,100%);margin-top:24px;padding:12px 18px 12px 16px;border-radius:20px;border:1px solid color-mix(in srgb,var(--accent-2) 45%,transparent);background:color-mix(in srgb,var(--accent-2) 12%,transparent);font-size:1rem;line-height:1.5;font-weight:600;color:var(--text)}
+  .pickrow{margin-top:22px}
+  .pick-label{display:block;font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .picks{display:flex;flex-wrap:wrap;gap:10px}
+  .pick{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 20px 0 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:.92rem;color:var(--text);-webkit-tap-highlight-color:transparent;transition:transform .25s,border-color .25s,box-shadow .25s,color .25s}
+  .pick::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));opacity:0;transition:opacity .3s}
+  .pick i,.pick span{position:relative}
+  .pick i{width:8px;height:8px;border-radius:50%;background:var(--accent);transition:transform .25s,background .25s}
+  .pick:hover,.pick:focus-visible{transform:translateY(-3px);border-color:transparent;color:#1a0f05;box-shadow:0 14px 30px -14px color-mix(in srgb,var(--accent) 75%,transparent)}
+  .pick:hover::before,.pick:focus-visible::before{opacity:1}
+  .pick:hover i,.pick:focus-visible i{background:#1a0f05;transform:scale(1.35)}
+  .pick:active{scale:.96}
+  .btn{min-height:48px;-webkit-tap-highlight-color:transparent}
+  .btn:active{scale:.97}
+  h1 .line:not(.grad) .wd{transition:color .25s,text-shadow .25s}
+  h1 .line:not(.grad) .wd:hover{color:var(--accent-2);text-shadow:0 0 26px color-mix(in srgb,var(--accent-2) 55%,transparent)}
   .ai-note i{width:7px;height:7px;border-radius:50%;background:var(--accent-2);flex:0 0 auto;margin-top:.55em}
   @media (max-width:500px){.ai-note{font-size:.84rem}}
   .cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
@@ -284,7 +299,7 @@
   .channels a:hover{transform:translateY(-4px);border-color:var(--accent)}
   .channels a:hover::before{transform:scaleX(1)}
   .channels .k{font-size:.8rem;font-weight:700;color:var(--accent)}
-  .channels .v{font-weight:700;font-size:1.05rem;word-break:break-all}
+  .channels .v{font-weight:700;font-size:1.05rem;overflow-wrap:anywhere}
   .contact .email{display:inline-block;margin-top:34px;font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:clamp(1.2rem,2.6vw,2rem);border-bottom:3px solid var(--accent);padding-bottom:4px}
   .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:80px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
 
@@ -483,12 +498,12 @@
             </div>
           </div>
           <h1 id="h1">
-            <span class="line"><span>AI automations that</span></span>
-            <span class="line"><span>actually work, tested</span></span>
-            <span class="line"><span>like products that</span></span>
-            <span class="line grad"><span>cannot afford to fail.</span></span>
+            <span class="line"><span>Turn Your Idea</span></span>
+            <span class="line"><span>Into a Working</span></span>
+            <span class="line grad"><span>App or Website.</span></span>
           </h1>
-          <div class="ai-note reveal"><i></i><span>I build AI agents, RAG assistants and n8n automations for real business tasks, then test them until they break. 7+ years of QA behind every build.</span></div>
+          <div class="ai-note reveal"><i></i><span>Built with AI for speed. Tested by a Senior QA Engineer for reliability.</span></div>
+          <div class="pickrow reveal"><span class="pick-label">What should we build?</span><div class="picks"><a class="pick" href="https://wa.me/923039042017?text=Hi%20Huzaifa%2C%20I%20would%20like%20a%20website%20built%20with%20AI-assisted%20development.%20Here%20is%20my%20idea%3A%20" target="_blank" rel="noopener"><i></i><span>Website</span></a><a class="pick" href="https://wa.me/923039042017?text=Hi%20Huzaifa%2C%20I%20would%20like%20a%20web%20app%20built%20with%20AI-assisted%20development.%20Here%20is%20my%20idea%3A%20" target="_blank" rel="noopener"><i></i><span>Web app</span></a><a class="pick" href="https://wa.me/923039042017?text=Hi%20Huzaifa%2C%20I%20would%20like%20a%20mobile%20app%20built%20with%20AI-assisted%20development.%20Here%20is%20my%20idea%3A%20" target="_blank" rel="noopener"><i></i><span>Mobile app</span></a><a class="pick" href="https://wa.me/923039042017?text=Hi%20Huzaifa%2C%20I%20would%20like%20an%20AI%20agent%20or%20automation%20built%20with%20AI-assisted%20development.%20Here%20is%20my%20idea%3A%20" target="_blank" rel="noopener"><i></i><span>AI agent</span></a></div></div>
           <p class="lede reveal">7+ years of QA across Android, iOS and web, on both client projects and long-running products. Manual, automation and API testing, from HR and e-commerce platforms to live telecom systems. I lead a seven-member QA team and take on freelance QA for teams worldwide.</p>
           <div class="cta reveal">
             <a class="btn btn-primary magnet" href="#contact"><span>Hire me</span></a>
@@ -668,10 +683,10 @@
       <div class="wrap">
         <h2 class="reveal">Let's talk about quality.</h2>
         <div class="channels reveal">
-          <a href="mailto:huzaifa.aamish@gmail.com"><span class="k">Email</span><span class="v">huzaifa.aamish@gmail.com</span></a>
+          <a href="mailto:huzaifa.aamish@gmail.com"><span class="k">Email</span><span class="v">huzaifa.aamish<wbr>@gmail.com</span></a>
           <a href="tel:+923039042017"><span class="k">Call</span><span class="v">+92 303 9042017</span></a>
           <a href="https://wa.me/923039042017?text=Hi%20Huzaifa%2C%20I%20found%20your%20website%20and%20would%20like%20to%20talk%20about%20QA." target="_blank" rel="noopener"><span class="k">WhatsApp</span><span class="v">Message or call on WhatsApp</span></a>
-          <a href="https://linkedin.com/in/huzaifa-aamish" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">linkedin.com/in/huzaifa-aamish</span></a>
+          <a href="https://linkedin.com/in/huzaifa-aamish" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">linkedin.com/in/<wbr>huzaifa-aamish</span></a>
         </div>
         <p class="yt-line reveal"><a href="https://www.youtube.com/@BuildThenBreak" target="_blank" rel="noopener">YouTube: Build Then Break</a></p>
         <div class="foot">
